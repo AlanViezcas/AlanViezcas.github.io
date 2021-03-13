@@ -39,11 +39,11 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="background-color:#212123 !important; border-bottom:#363738 !important">
             <div class="container">
               
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button class="navbar-toggler" type="button" data-toggle="collapse" onclick="showHide()" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="menu">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item ">
                             <a class="nav-link text-light" href="./index.html" style="font-size:20px">Home</a>
@@ -143,4 +143,16 @@
      
     </div>
 </body>
+<script>
+function showHide(){
+    var menu =  document.getElementById("menu");
+    if(menu.style.display == "inline"){
+        document.getElementById("menu").style.display="none";
+    }else{
+        document.getElementById("menu").style.display="inline";
+    }
+    
+}
+</script>
+
 </html>
